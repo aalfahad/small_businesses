@@ -4,6 +4,18 @@
 	<title></title>
 </head>
 <body>
-{{title}}
+
+	{%	for item in businesses %}
+	<a href="{% url 'home_detail' businesses_id=item.id %}">
+	<ul>
+		<li>Name {{item.name}}</li>
+		<li> {{item.description}}</li>
+		<li>established {{item.established}}</li>
+	</ul>
+	</a>
+	{% endfor %}
+
+
+
 </body>
 </html>

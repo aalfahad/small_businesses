@@ -11,5 +11,7 @@ class Business(models.Model):
 	established = models.DateField()
 
 	def __str__(self):
-		return self
+		return self.name
+
+
 		
