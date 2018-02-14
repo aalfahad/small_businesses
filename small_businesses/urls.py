@@ -19,7 +19,11 @@ from businesses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('random/', views.home,name = "home"),
-    path('detail/<int:businesses_id>/',views.home_detail,name="home_detail"),
-
+    #path('random/', views.home,name = "home"),
+    #path('detail/<int:businesses_id>/',views.home_detail,name="home_detail"),
+    path('business_list',views.business_list,name="business_list"),
+    path('business_detail/<int:business_id>/',views.business_detail,name="business_detail"),
+    path('create/',views.business_create,name="business_create"),
+    path('update/<int:business_id>/',views.business_update,name="business_update"),
+    path('delete/<int:business_id>/',views.delete,name="delete")
 ]

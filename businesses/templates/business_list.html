@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	{%	for item in objects %}
+	
+	<ul>
+		<a href="{% url 'business_detail' business_id=item.id %}">
+			<li>Name {{item.name}}</li>
+		</a>
+		<li> {{item.description}}</li>
+		<li>established {{item.established}}</li>
+	</ul>
+	<a href="{% url 'delete' business_id=item.id %}"><input type="button" value="Delete" ></a>
+	<a href="{% url 'business_update' business_id=business_obj.id"><input type="button" value="Update"></a>
+
+	{% endfor %}
+
+
+</body>
+</html>
